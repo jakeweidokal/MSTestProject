@@ -12,9 +12,9 @@ namespace UserProject
     {
         public bool SignIn(User user)
         {
-            return (user == null || user.UserName == null || user.Password == null) 
-                ? false 
-                : (user.UserName == "TrainingUser" && user.Password == "Training@1");
+            bool isUserNull = user == null || user.UserName == null || user.Password == null;
+            bool hasValidUsernameAndPassword = user.UserName == "TrainingUser" && user.Password == "Training@1";
+            return !isUserNull && hasValidUsernameAndPassword;
         }
     }
 }
