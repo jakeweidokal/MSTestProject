@@ -21,8 +21,15 @@ namespace MSTestProject
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void Should_Not_SignIn_If_No_Credentials()
         {
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void Should_SignIn_ValidUser()
+        {
+            Assert.Fail();
         }
     }
 }
