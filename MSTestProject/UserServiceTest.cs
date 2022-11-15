@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UserProject;
 using UserProject.Interfaces;
+using UserProject.Models;
 
 namespace MSTestProject
 {
@@ -24,19 +25,34 @@ namespace MSTestProject
         [TestMethod]
         public void Should_Not_SignIn_If_No_Credentials()
         {
-            Assert.Fail();
+            // Arrange
+            User user = new User();
+            // Act
+            var result = _userService.SignIn(user);
+            // Assert
+            Assert.AreEqual(result, false);
         }
 
         [TestMethod]
         public void Should_SignIn_ValidUser()
         {
-            Assert.Fail();
+            // Arrange
+            User user = new User() { UserName="TrainingUser", Password="Training@1"};
+            // Act
+            var result = _userService.SignIn(user);
+            // Assert
+            Assert.AreEqual(result, true);
         }
 
         [TestMethod]
         public void Should_Not_SignIn_InvalidUser()
         {
-            Assert.Fail();
+            // Arrange
+            User user = new User() { UserName = "INVALID_NAME", Password = "INVALID_PASSWORD" };
+            // Act
+            var result = _userService.SignIn(user);
+            // Assert
+            Assert.AreEqual(result, false);
         }
     }
 }
