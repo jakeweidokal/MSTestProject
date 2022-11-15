@@ -59,22 +59,14 @@ namespace MSTestProject
         [ExpectedException(typeof(ArgumentException), "Parameter username may not be null or blank")]
         public void Null_Username_In_Constructor()
         {
-            // Arrange
-
-            // Act
             User logonInfo = new User(0, null, "test@test.com", "Password");
-            // Assert
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException), "Parameter password may not be null or blank")]
         public void Null_Password_In_Constructor()
         {
-            // Arrange
-
-            // Act
             User logonInfo = new User(0, "Test", "test@test.com", null);
-            // Assert
         }
     }
 }
