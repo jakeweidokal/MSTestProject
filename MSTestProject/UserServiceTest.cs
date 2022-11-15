@@ -115,7 +115,7 @@ namespace MSTestProject
 
         #endregion
 
-        #region Ignore Tests
+        #region Ignore Tests (does not show in Test Explorer)
 
         [Ignore]
         public void Should_Ignore_SignIn_Test()
