@@ -62,7 +62,7 @@ namespace MSTestProject
             // Arrange
 
             // Act
-
+            User logonInfo = new User(0, null, "test@test.com", "Password");
             // Assert
         }
 
@@ -73,7 +73,7 @@ namespace MSTestProject
             // Arrange
 
             // Act
-
+            User logonInfo = new User(0, "Test", "test@test.com", null);
             // Assert
         }
     }
