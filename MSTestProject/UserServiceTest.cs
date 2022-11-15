@@ -54,5 +54,27 @@ namespace MSTestProject
             // Assert
             Assert.AreEqual(result, false);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Parameter username may not be null or blank")]
+        public void Null_Username_In_Constructor()
+        {
+            // Arrange
+
+            // Act
+
+            // Assert
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Parameter password may not be null or blank")]
+        public void Null_Password_In_Constructor()
+        {
+            // Arrange
+
+            // Act
+
+            // Assert
+        }
     }
 }
