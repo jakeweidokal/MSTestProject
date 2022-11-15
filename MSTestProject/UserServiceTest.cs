@@ -114,5 +114,20 @@ namespace MSTestProject
         }
 
         #endregion
+
+        #region Ignore Tests
+
+        [Ignore]
+        public void Should_Ignore_SignIn_Test()
+        {
+            // Arrange
+            User user = new User(0, "TrainingUser", null, "Training@1");
+            // Act
+            var result = _userService.SignIn(user);
+            // Assert
+            Assert.AreEqual(result, true);
+        }
+
+        #endregion
     }
 }
