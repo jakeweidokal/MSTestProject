@@ -1,3 +1,4 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UserProject;
 using UserProject.Interfaces;
 
@@ -28,6 +29,12 @@ namespace MSTestProject
 
         [TestMethod]
         public void Should_SignIn_ValidUser()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void Should_Not_SignIn_InvalidUser()
         {
             Assert.Fail();
         }
